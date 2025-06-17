@@ -1,0 +1,23 @@
+.titulo-responsaveis {
+    margin-left: 0;
+}
+
+.col-nome {
+    flex: 2;
+}
+.col-cpf{
+    flex: 1;
+}
+.col-obras {
+    flex: 1;
+}
+.col-telefone {
+    flex: 1;
+}
+.col-email {
+    flex: 1;
+}
+.col-acoes {
+    flex: 1;
+}
+  

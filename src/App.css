@@ -1,0 +1,52 @@
+*{
+  margin: 0 auto;
+  text-decoration: none;
+  box-sizing: border-box;
+
+}
+button {
+  border: none; 
+  background: none; 
+  padding: 0; 
+  cursor: pointer; 
+  outline: none; 
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+}
+
+.pages-background {
+  height: 90vh;
+  background-color: #f1f1f1;
+}
+
+
+.botao-retangular {
+  background-color: #31B090;
+  color: #ffffff;
+  border-radius: 5px;
+  height: 6vh;
+  margin:7px;
+  padding: 0 20px;
+}
+
+  
+  /* Campo de busca */
+  .input-buscar {
+    height: 6vh;
+    border: 1px solid #d5dce4;
+    border-radius: 5px;
+    margin: 7px;
+    padding-left: 10px;
+    width: 20vw;
+  }
+
+
+  

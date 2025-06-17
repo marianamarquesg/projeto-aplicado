@@ -1,0 +1,26 @@
+Header {
+    background-color: #202632;
+    color: white;
+    display: flex;
+    height: 10vh;
+  }
+  
+  #header {
+    display: flex;
+    align-items: center;
+    width: 90%;
+  }
+
+
+#logo {
+    margin: 0 10px
+}
+
+#menu, a {
+    margin: 0 10px
+}
+
+
+#botao-detalhes-usuario {
+    margin-right: 10px;
+}
