@@ -23,7 +23,7 @@ a {
 }
 
 .pages-background {
-  height: 90vh;
+  min-height: 90vh;
   background-color: #f1f1f1;
 }
 
@@ -37,8 +37,6 @@ a {
   padding: 0 20px;
 }
 
-  
-  /* Campo de busca */
   .input-buscar {
     height: 6vh;
     border: 1px solid #d5dce4;

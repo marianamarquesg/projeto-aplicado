@@ -1,0 +1,32 @@
+
+
+.cadastro-obra {
+    width: 90%;
+    padding: 6vh 0 6vh 0;
+  }
+
+  .titulo-cadastar-obra {
+    margin:0 0 30px 15px;
+  }
+
+  
+  .inputs-cadastro-obra {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: white;
+    padding: 0 20px 30px 20px;
+  }
+
+  .inputs-cadastro-obra h4 {
+    grid-column: span 3; 
+    padding: 40px 0 25px 0;
+  }
+
+  .form-label {
+    margin: 0 0 3px 0;
+    font-weight: 500;
+  }
+  
+  
+  
