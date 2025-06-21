@@ -11,7 +11,7 @@ function Header () {
           
                 <nav id='menu'>
                     <Link to='/obras'>Obras</Link>
-                    <Link to='/Responsaveis'>Responsáveis</Link>
+                    {/* <Link to='/Responsaveis'>Responsáveis</Link> */}
                 </nav>
             
                 <BotaoDetalhesUsuario/>

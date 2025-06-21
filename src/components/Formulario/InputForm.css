@@ -1,0 +1,50 @@
+/* .input-form{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    
+    /* background-color: blue;
+    width: 400px; */
+   */
+  
+ .form-label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid red;
+  }
+  
+ input {
+    margin-left: 0;
+    width: 100%;
+    height: 5vh;
+    border-radius: 5px;
+    border: 1px solid #d9d9d9;
+    margin: 5px 0;
+    font-size: 15px;
+    padding-left: 12px;
+  }
+
+
+  .uma-coluna {
+    grid-column: span 1; 
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+  }
+
+  .duas-colunas {
+    grid-column: span 2; 
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+  }
+
+  .tres-colunas {
+    grid-column: span 3; 
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+  }
+
+

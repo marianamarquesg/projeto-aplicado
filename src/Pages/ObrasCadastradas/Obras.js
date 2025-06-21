@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import CadastroObra from './CadastroObra';
-import Select from 'react-select';
+import { Link } from "react-router-dom";
 
 import './Obras.css';
 
@@ -53,8 +52,6 @@ function Obras() {
     return combinaStatus && combinaBusca;
   });
 
-
-
   return (
     <section id='obras-section'>
         <section id='filtro-obras'>
@@ -72,7 +69,8 @@ function Obras() {
                 value={busca}
                 onChange={(e) => setBusca(e.target.value)}
                 />
-                <button class='botao-retangular'>Criar Nova Obra</button>
+                <Link class='botao-retangular' to='/cadastroObra'>Criar Nova Obra</Link>
+
             </nav>
         </section>
         
@@ -80,7 +78,7 @@ function Obras() {
         <ul id="lista-obras">
         <li className="cabecalho-tabela">
             <p className="col col-nome">Nome da obra</p>
-            <p className="col col-responsavel">Responsável Técnico</p>
+            {/* <p className="col col-responsavel">Responsável Técnico</p> */}
             <p className="col col-prazo">Prazo atual/estimado</p>
             <p className="col col-final">Data final</p>
             <p className="col col-status">Status</p>
@@ -90,7 +88,7 @@ function Obras() {
     obrasFiltradas.map((obra, index) => (
       <li className="item-lista" key={index}>
         <p className="col col-nome">{obra.nome}</p>
-        <p className="col col-responsavel">{obra.responsavel}</p>
+        {/* <p className="col col-responsavel">{obra.responsavel}</p> */}
         <p className="col col-prazo">{obra.prazo}</p>
         <p className="col col-final">{obra.dataFinal || '—'}</p>
         <div className={`col col-status tag-status ${obra.status.replace(/\s+/g, '-').toLowerCase()}`}>
@@ -103,7 +101,7 @@ function Obras() {
   )}
 </ul>
 
-    <CadastroObra></CadastroObra>
+
     </section>
   );
 }
