@@ -8,42 +8,48 @@ function Obras() {
   const [busca, setBusca] = useState('');
 
   const obras = [
-    {
-      nome: 'Reforma da Escola Municipal',
-      status: 'Em Andamento',
-      responsavel: 'Eng. João Silva',
-      prazo: '2025-07-15',
-      dataFinal: '2025-05-28' 
-    },
-    {
-      nome: 'Construção do Posto de Saúde',
-      status: 'Finalizada',
-      responsavel: 'Arq. Marina Costa',
-      prazo: '2025-05-30',
-      dataFinal: '2025-05-28'
-    },
-    {
-      nome: 'Duplicação da Avenida Central',
-      status: 'Atrasada',
-      responsavel: 'Eng. Carlos Lima',
-      prazo: '2025-06-01',
-      dataFinal: '2025-05-28'
-    },
-    {
-      nome: 'Obra da Praça do Bairro',
-      status: 'Finalizada',
-      responsavel: 'Eng. Ana Ribeiro',
-      prazo: '2025-04-20',
-      dataFinal: '2025-04-19'
-    },
-    {
-      nome: 'Construção de Creche Municipal',
-      status: 'Em Andamento',
-      responsavel: 'Eng. Rodrigo Melo',
-      prazo: '2025-09-10',
-      dataFinal: '2025-05-28'
-    }
-  ];
+  {
+    id: 1,
+    nome: 'Reforma da Escola Municipal',
+    status: 'Em Andamento',
+    responsavel: 'Eng. João Silva',
+    prazo: '2025-07-15',
+    dataFinal: '2025-05-28' 
+  },
+  {
+    id: 2,
+    nome: 'Construção do Posto de Saúde',
+    status: 'Finalizada',
+    responsavel: 'Arq. Marina Costa',
+    prazo: '2025-05-30',
+    dataFinal: '2025-05-28'
+  },
+  {
+    id: 3,
+    nome: 'Duplicação da Avenida Central',
+    status: 'Atrasada',
+    responsavel: 'Eng. Carlos Lima',
+    prazo: '2025-06-01',
+    dataFinal: '2025-05-28'
+  },
+  {
+    id: 4,
+    nome: 'Obra da Praça do Bairro',
+    status: 'Finalizada',
+    responsavel: 'Eng. Ana Ribeiro',
+    prazo: '2025-04-20',
+    dataFinal: '2025-04-19'
+  },
+  {
+    id: 5,
+    nome: 'Construção de Creche Municipal',
+    status: 'Em Andamento',
+    responsavel: 'Eng. Rodrigo Melo',
+    prazo: '2025-09-10',
+    dataFinal: '2025-05-28'
+  }
+];
+
   
 
   const obrasFiltradas = obras.filter((obra) => {
@@ -87,7 +93,10 @@ function Obras() {
   {obrasFiltradas.length > 0 ? (
     obrasFiltradas.map((obra, index) => (
       <li className="item-lista" key={index}>
-        <p className="col col-nome">{obra.nome}</p>
+        <Link to={`/detalhesObra/${obra.id}`} className="col col-nome">
+  {obra.nome}
+</Link>
+
         {/* <p className="col col-responsavel">{obra.responsavel}</p> */}
         <p className="col col-prazo">{obra.prazo}</p>
         <p className="col col-final">{obra.dataFinal || '—'}</p>

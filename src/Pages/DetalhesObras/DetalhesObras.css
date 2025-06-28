@@ -1,0 +1,25 @@
+/* DetalhesObras.css */
+.container {
+  padding: 20px;
+  background-color: #ffffff;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #005f73;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.link-voltar {
+  display: inline-block;
+  margin-top: 20px;
+  color: #0a9396;
+  text-decoration: none;
+}
+.link-voltar:hover {
+  text-decoration: underline;
+}
