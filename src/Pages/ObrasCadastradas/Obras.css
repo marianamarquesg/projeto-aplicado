@@ -9,7 +9,6 @@
   margin: 0;
 }
 
-/* CabeÃ§alho e itens da lista com layout flex igual */
 .cabecalho-tabela,
 .item-lista {
   display: flex;
@@ -21,7 +20,6 @@
   border-bottom: 1px solid #ddd;
 }
 
-/* EstilizaÃ§Ã£o especÃ­fica do cabeÃ§alho */
 .cabecalho-tabela {
   background-color: #f1f1f1;
   text-transform: uppercase;
@@ -30,7 +28,6 @@
   padding: 40px 0 20px 10px;
 }
 
-/* Colunas com largura controlada */
 .col {
   padding: 4px 8px;
   overflow: hidden;
@@ -38,7 +35,6 @@
   white-space: nowrap;
 }
 
-/* Larguras proporcionais */
 .col-nome {
   flex: 2;
 }
@@ -56,29 +52,24 @@
 }
 
 
-/* EstilizaÃ§Ã£o da barra de filtros */
 #filtro-obras {
   background-color: #ffffff;
   width: 100%;
-  height: 8vh;
   color: #1c030c;
   display: flex;
 }
 
-/* Container interno de botÃµes + input */
 #filtro-obras nav {
   width: 90%;
   display: flex;
   align-items: center;
 }
 
-/* BotÃµes de filtro */
 .buttons-filtro {
   width: 60vw;
   display: flex;
 }
 
-/* Status estilizado com fundo */
 .tag-status {
   border-radius: 25px;
   padding: 7px 40px;
@@ -87,16 +78,16 @@
 }
 
 .em-andamento {
-  background-color: #f1f1f1; /* amarelo */
+  background-color: #f1f1f1;
 }
 
 .finalizada {
-  background-color: #31B090; /* verde */
+  background-color: #31B090; 
   color: white;
 }
 
 .atrasada {
-  background-color: #d9534f; /* vermelho */
+  background-color: #d9534f; 
   color: white;
 }
 
