@@ -1,10 +1,12 @@
 import { useParams, Link } from 'react-router-dom';
 import './DetalhesObras.css';
+import ObraInfo from './ObraInfo';
+import ObraGrafico from './ObraGrafico';
+
 
 function DetalhesObra() {
   const { id } = useParams();
 
-  // Simulando os dados (mesma lista com id)
   const obras = [
     {
       id: 1,
@@ -48,31 +50,25 @@ function DetalhesObra() {
     }
   ];
 
-  // Procurar a obra pelo id
   const obra = obras.find((o) => o.id === parseInt(id));
 
   if (!obra) {
     return (
       <div className="container">
         <h2>Obra não encontrada</h2>
-        <Link to="/" className="link-voltar">Voltar</Link>
+        <Link to="/obras" className="link-voltar">Voltar</Link>
       </div>
     );
   }
 
   return (
     <div className="container">
-      <h1>Detalhes da Obra</h1>
-      <p><strong>Nome:</strong> {obra.nome}</p>
-      <p><strong>Responsável:</strong> {obra.responsavel}</p>
-      <p><strong>Status:</strong> {obra.status}</p>
-      <p><strong>Prazo:</strong> {obra.prazo}</p>
-      <p><strong>Data Final:</strong> {obra.dataFinal}</p>
+      <ObraInfo obra={obra} />
+      <ObraGrafico obra={obra} />
       <br />
-      <Link to="/" className="link-voltar">Voltar para lista</Link>
+      <Link to="/obras" className="link-voltar">Voltar para lista</Link>
     </div>
   );
 }
 
 export default DetalhesObra;
-

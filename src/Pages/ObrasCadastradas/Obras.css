@@ -5,6 +5,7 @@
 
 #lista-obras {
   list-style: none;
+  text-overflow: ellipsis;
   padding: 0;
   margin: 0;
 }
@@ -91,8 +92,8 @@
 }
 
 .finalizada {
-  background-color: #31B090; /* verde */
-  color: white;
+  background-color: #ffffff; /* verde */
+  color: rgb(0, 0, 0);
 }
 
 .atrasada {
@@ -102,5 +103,14 @@
 
 .buttons-filtro button.active {
   text-decoration: underline;
+}
+.item-lista a {
+  color: #000;
+  text-decoration: none;
+}
+
+.item-lista a:hover {
+  text-decoration: underline;
+  color: #005f73;
 }
 
