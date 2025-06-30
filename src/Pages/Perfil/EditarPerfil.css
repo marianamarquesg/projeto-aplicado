@@ -8,6 +8,10 @@ h2 {
   margin-bottom: 20px;
 }
 
+.botoes-editar-perfil {
+  display: flex;
+}
+
 button {
   padding: 8px 16px;
   font-size: 14px;

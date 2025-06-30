@@ -66,9 +66,11 @@ function EditarPerfil() {
       <InputForm label="Departamento" value={departamento} onChange={e => setDepartamento(e.target.value)} />
       <InputForm label="Email" type="email" value={email} onChange={e => setEmail(e.target.value)} />
       <InputForm label="Telefone" value={telefone} onChange={e => setTelefone(e.target.value)} />
-
-      <Botao onClick={cancelarEdicao}>Cancelar</Botao>
-      <Botao onClick={salvarAlteracoes}>Salvar</Botao>
+      <div className='botoes-editar-perfil'>
+        <Botao onClick={cancelarEdicao}>Cancelar</Botao>
+        <Botao onClick={salvarAlteracoes}>Salvar</Botao>
+      </div>
+    
     </div>
   );
 }
