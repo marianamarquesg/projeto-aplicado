@@ -1,0 +1,33 @@
+.footer {
+  width: 100%;
+  background-color: #202632;
+  color: #f1f1f1;
+  padding: 0.5rem 0;
+  text-align: center;
+  height: 20vh;
+}
+
+
+
+
+.footer-content {
+ padding: 2vh
+}
+
+.footer-text {
+  margin-top: 0.3rem;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.footer-contato {
+  margin-top: 0.7rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.footer-contato p {
+  margin: 0.2rem 0;
+}
+

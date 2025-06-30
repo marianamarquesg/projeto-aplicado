@@ -27,6 +27,17 @@ a {
   background-color: #f1f1f1;
 }
 
+.pages-section-background{
+  background-color:#ffffff;
+  width: 90vw;
+  
+}
+
+.container {
+  width: 90%;
+  padding: 6vh 0 6vh 0;
+}
+
 
 .botao-retangular {
   background-color: #31B090;
@@ -34,8 +45,14 @@ a {
   border-radius: 5px;
   height: 6vh;
   margin:7px;
-  padding: 0 20px;
+  width: 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 600;
 }
+
 
   .input-buscar {
     height: 6vh;
