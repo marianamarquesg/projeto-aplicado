@@ -1,16 +1,13 @@
 .home-container {
-  padding: 3rem 1rem;
+  padding: 8rem 5rem;
   max-width: 900px;
-  margin: 0 auto;
   text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 70vh;
 }
 
 .home-container h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
   color: #202632;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .home-container p {

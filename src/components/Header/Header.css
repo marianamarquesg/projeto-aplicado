@@ -2,20 +2,9 @@ header {
   background-color: #202632;
   color: white;
   display: flex;
-  justify-content: center; /* centraliza o container #header */
   height: 10vh;
-  padding: 0 40px;
-  box-sizing: border-box;
-}
-
-
-#header {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
-  box-sizing: border-box;
+
 }
 
 .logo-menu {
