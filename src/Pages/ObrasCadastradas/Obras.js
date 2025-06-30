@@ -4,8 +4,19 @@ import { Link } from "react-router-dom";
 import './Obras.css';
 
 function Obras() {
+
   const obrasMockadas = [
     {
+      id: 1,
+      nome: 'Reforma da Escola Municipal',
+      status: 'Em Andamento',
+      responsavel: 'Eng. João Silva',
+      dataInicio: '2025-04-01',
+      prazo: '105',       // prazo total em dias
+      dataFinal: '2025-07-15'
+    },
+    {
+      id: 2,
       nome: 'Construção do Posto de Saúde',
       status: 'Finalizada',
       responsavel: 'Arq. Marina Costa',
@@ -14,6 +25,7 @@ function Obras() {
       dataFinal: '2025-05-30'
     },
     {
+      id: 3,
       nome: 'Duplicação da Avenida Central',
       status: 'Atrasada',
       responsavel: 'Eng. Carlos Lima',
@@ -29,11 +41,9 @@ function Obras() {
 
   useEffect(() => {
     const obrasSalvas = JSON.parse(localStorage.getItem('obrasSalvas')) || [];
-    // Junta mock + salvas, sem duplicar (simples concatenação)
     setObras([...obrasMockadas, ...obrasSalvas]);
   }, []);
 
-  // Função para calcular prazo atual/estimado no formato x/y
   const calcularPrazoAtualEstimado = (dataInicioStr, prazoStr) => {
     if (!dataInicioStr || !prazoStr) return '—';
 
@@ -42,10 +52,9 @@ function Obras() {
     if (isNaN(prazoTotal)) return '—';
 
     const hoje = new Date();
-    // Calcula dias passados desde dataInicio até hoje
     let diasPassados = Math.floor((hoje - dataInicio) / (1000 * 60 * 60 * 24));
-    if (diasPassados < 0) diasPassados = 0; // se hoje antes do início, mostra 0
-    if (diasPassados > prazoTotal) diasPassados = prazoTotal; // não ultrapassa prazo total
+    if (diasPassados < 0) diasPassados = 0;
+    if (diasPassados > prazoTotal) diasPassados = prazoTotal;
 
     return `${diasPassados} / ${prazoTotal}`;
   };
@@ -89,7 +98,9 @@ function Obras() {
         {obrasFiltradas.length > 0 ? (
           obrasFiltradas.map((obra, index) => (
             <li className="item-lista" key={index}>
-              <p className="col col-nome">{obra.nome}</p>
+              <Link to={`/detalhesObra/${obra.id || index}`} className="col col-nome">
+                {obra.nome}
+              </Link>
               <p className="col col-prazo">{calcularPrazoAtualEstimado(obra.dataInicio, obra.prazo)}</p>
               <p className="col col-final">{obra.dataFinal || '—'}</p>
               <div className={`col col-status tag-status ${obra.status?.replace(/\s+/g, '-').toLowerCase() || ''}`}>
@@ -106,3 +117,4 @@ function Obras() {
 }
 
 export default Obras;
+

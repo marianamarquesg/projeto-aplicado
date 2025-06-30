@@ -23,37 +23,45 @@ function CadastroObra() {
 
   const navigate = useNavigate();
 
-  const seguir = (e) => {
-    e.preventDefault();
+const seguir = (e) => {
+  e.preventDefault();
 
-    if (!proprietario || !nomeObra || !cep || !rua || !bairro || !cidade || !numero || !dataInicio || !dataFinal) {
-      alert('Preencha todos os campos obrigatórios antes de continuar.');
-      return;
-    }
+  if (!proprietario || !nomeObra || !cep || !rua || !bairro || !cidade || !numero || !dataInicio || !dataFinal) {
+    alert('Preencha todos os campos obrigatórios antes de continuar.');
+    return;
+  }
 
-    const obra = {
-      nome: nomeObra,
-      proprietario,
-      contatoProprietario,
-      endereco: {
-        cep,
-        rua,
-        bairro,
-        cidade,
-        numero,
-        complemento
-      },
-      prazo,
-      dataFinal,
-      dataInicio,
-      observacao,
-      status: 'Em Andamento'
-    };
-
-    localStorage.setItem('obraEmAndamento', JSON.stringify(obra));
-    localStorage.setItem('etapas', JSON.stringify([]));
-    navigate('/cadastroEtapas');
+  const novaObra = {
+    id: Date.now(), // Garante ID único
+    nome: nomeObra,
+    proprietario,
+    contatoProprietario,
+    endereco: {
+      cep,
+      rua,
+      bairro,
+      cidade,
+      numero,
+      complemento
+    },
+    prazo,
+    dataFinal,
+    dataInicio,
+    observacao,
+    status: 'Em Andamento'
   };
+
+  // Salvar na lista de obras salvas (para listagem e detalhes)
+  const obrasSalvas = JSON.parse(localStorage.getItem('obrasSalvas')) || [];
+  obrasSalvas.push(novaObra);
+  localStorage.setItem('obrasSalvas', JSON.stringify(obrasSalvas));
+
+  // Também salva como obra em andamento (se quiser continuar para etapas)
+  localStorage.setItem('obraEmAndamento', JSON.stringify(novaObra));
+  localStorage.setItem('etapas', JSON.stringify([]));
+
+  navigate('/cadastroEtapas');
+};
 
   const cancelar = (e) => {
     e.preventDefault();
