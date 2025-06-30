@@ -13,7 +13,7 @@ function DetalhesPerfil() {
   }
 
   return (
-    <div className="container">
+    <div className="container-detalhes-perfil">
       <h2>Perfil do Usuário</h2>
 
       <InputForm label="Nome" value={`${usuario.nome} ${usuario.sobrenome}`} disabled />

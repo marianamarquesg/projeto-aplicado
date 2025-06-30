@@ -57,7 +57,7 @@ function EditarPerfil() {
   }
 
   return (
-    <div className="container">
+    <div className="container-editar-perfil">
       <h2>Editar Perfil</h2>
 
       <InputForm label="Nome" value={nome} onChange={e => setNome(e.target.value)} />
