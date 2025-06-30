@@ -6,14 +6,6 @@ import './Obras.css';
 function Obras() {
   const obrasMockadas = [
     {
-      nome: 'Reforma da Escola Municipal',
-      status: 'Em Andamento',
-      responsavel: 'Eng. João Silva',
-      dataInicio: '2025-04-01',
-      prazo: '105',       // prazo total em dias
-      dataFinal: '2025-07-15'
-    },
-    {
       nome: 'Construção do Posto de Saúde',
       status: 'Finalizada',
       responsavel: 'Arq. Marina Costa',
