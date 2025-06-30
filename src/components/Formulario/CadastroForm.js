@@ -25,8 +25,6 @@ function CadastroForm() {
       return;
     }
 
-    const dataAdmissao = new Date().toISOString().split('T')[0];
-
     const usuario = {
       nome,
       sobrenome,
@@ -34,8 +32,7 @@ function CadastroForm() {
       email,
       telefone,
       senha,
-      funcao,
-      dataAdmissao,
+      funcao
     };
 
     const usuariosExistentes = JSON.parse(localStorage.getItem('usuarios')) || [];

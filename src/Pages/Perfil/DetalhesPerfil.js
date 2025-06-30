@@ -19,7 +19,6 @@ function DetalhesPerfil() {
       <InputForm label="Nome" value={`${usuario.nome} ${usuario.sobrenome}`} disabled />
       <InputForm label="Cargo" value={usuario.funcao} disabled />
       <InputForm label="Departamento" value="Engenharia Civil" disabled />
-      <InputForm label="Data de Admissão" type="date" value={usuario.dataAdmissao} disabled />
       <InputForm label="Email" value={usuario.email} disabled />
       <InputForm label="Telefone" value={usuario.telefone} disabled />
 

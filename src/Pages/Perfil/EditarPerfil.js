@@ -64,7 +64,6 @@ function EditarPerfil() {
       <InputForm label="Sobrenome" value={sobrenome} onChange={e => setSobrenome(e.target.value)} />
       <InputForm label="Cargo" value={cargo} onChange={e => setCargo(e.target.value)} />
       <InputForm label="Departamento" value={departamento} onChange={e => setDepartamento(e.target.value)} />
-      <InputForm label="Data de Admissão" type="date" value={dataAdmissao} disabled />
       <InputForm label="Email" type="email" value={email} onChange={e => setEmail(e.target.value)} />
       <InputForm label="Telefone" value={telefone} onChange={e => setTelefone(e.target.value)} />
 

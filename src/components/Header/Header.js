@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import BotaoDetalhesUsuario from "./BotaoDetalhesUsuario";
-import BotaoSair from "./BotaoSair";
 import MenuHamburguer from "../MenuHamburguer/MenuHamburguer";
 
 import './Header.css';

@@ -26,7 +26,6 @@ function MenuHamburguer() {
       </button>
 
       <nav className={`menu-links ${aberto ? 'aberto' : ''}`}>
-        <Link to="/" onClick={toggleMenu}>Início</Link>
         <Link to="/home" onClick={toggleMenu}>Sobre o ObrasTrack</Link>
         <Link to="/obras" onClick={toggleMenu}>Obras</Link>
         <Link to="/detalhesperfil" onClick={toggleMenu}>Perfil</Link>
