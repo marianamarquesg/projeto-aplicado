@@ -1,0 +1,24 @@
+.botao {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+
+.botao:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.botao.cancelar {
+  background-color: #6c757d;
+}
+
+.botao.cancelar:hover:not(:disabled) {
+  background-color: #5a6268;
+}
