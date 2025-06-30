@@ -14,4 +14,5 @@ function InputForm({ label, value, className, onChange, type = 'text', ...rest }
   );
 }
 
+
 export default InputForm;
