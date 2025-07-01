@@ -1,26 +1,39 @@
-Header {
-    background-color: #202632;
-    color: white;
-    display: flex;
-    height: 10vh;
-  }
-  
-  #header {
-    display: flex;
-    align-items: center;
-    width: 90%;
-  }
+header {
+  background-color: #202632;
+  color: white;
+  display: flex;
+  height: 10vh;
+  align-items: center;
+
+}
+
+.logo-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
 
 #logo {
-    margin: 0 10px
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00bcd4;
+  margin: 0; 
 }
 
-#menu, a {
-    margin: 0 10px
+
+#menu {
+  margin-right: 20px;
 }
 
+#menu a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
 
-#botao-detalhes-usuario {
-    margin-right: 10px;
+#menu a:hover {
+  color: #00bcd4;
 }

@@ -1,0 +1,60 @@
+.cadastro-container {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.form-cadastro .linha {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-cadastro .linha > div {
+  flex: 1;
+}
+
+.funcoes {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.funcoes.centro {
+  justify-content: center;
+}
+
+.funcao-card {
+  flex: 1;
+  padding: 1rem;
+  max-width: 180px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.funcao-card.ativo {
+  border-color: #007f5f;
+  background-color: #e6fff1;
+}
+
+.funcao-card p {
+  margin: 0.5rem 0 0;
+  font-weight: bold;
+}
+
+.funcao-card small {
+  font-size: 0.75rem;
+  color: #555;
+}
+
+.botao {
+  display: block;
+  margin: 1.5rem auto 0 auto; /* centraliza e dá um espaçamento de cima */
+  background-color: #007f5f;
+  color: #fff; /* garante que o texto fique legível */
+  border: none;
+}

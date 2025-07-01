@@ -117,16 +117,16 @@ function CadastroEtapas() {
 
     const obraCompleta = { ...obra, etapas };
 
-    // Pega as obras já salvas (array)
+ 
     let obrasSalvas = JSON.parse(localStorage.getItem('obrasSalvas')) || [];
 
-    // Adiciona a nova obra completa (etapas + obra) ao array
+
     obrasSalvas.push(obraCompleta);
 
-    // Salva no localStorage
+  
     localStorage.setItem('obrasSalvas', JSON.stringify(obrasSalvas));
 
-    // Remove dados temporários da obra em andamento e etapas
+   
     localStorage.removeItem('obraEmAndamento');
     localStorage.removeItem('etapas');
 
