@@ -13,7 +13,7 @@ function MenuHamburguer() {
 
   const toggleMenu = () => setAberto(!aberto);
 
-  const rotasOcultas = ['/', '/register'];
+  const rotasOcultas = ['/', '/cadastro'];
 
   if (rotasOcultas.includes(location.pathname)) {
     return null;

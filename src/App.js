@@ -13,6 +13,9 @@ import CadastroForm from './components/Formulario/CadastroForm';
 import Footer from './components/Footer/Footer';
 import Home from './Pages/Home/Home';
 import CadastroEtapas from './Pages/CadastroEtapas/CadastroEtapas';
+import CadastroUsuario from './Pages/CadastroUsuario/CadastroUsuario';
+
+
 
 
 
@@ -25,7 +28,7 @@ function App() {
     <main class='pages-background'>
       <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/register" element={<CadastroForm />} />
+          <Route path="/cadastro" element={<CadastroUsuario />} />
           <Route path='/obras' element={<Obras />} />
 
           <Route path='/cadastroobra' element={<CadastroObra />} />
