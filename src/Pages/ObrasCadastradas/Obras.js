@@ -7,7 +7,7 @@ function Obras() {
 
   const obrasMockadas = [
     {
-      id: 1, // Mantenha IDs únicos e fixos para as mockadas
+      id: 1, 
       nome: 'Reforma da Escola Municipal',
       status: 'Em Andamento',
       responsavel: 'Eng. João Silva',
@@ -42,28 +42,25 @@ function Obras() {
   useEffect(() => {
     const obrasSalvas = JSON.parse(localStorage.getItem('obrasSalvas')) || [];
 
-    // Primeiro, crie um mapa para rastrear IDs já vistos
+   
     const obrasUnicasMap = new Map();
 
-    // Adicione as obras salvas primeiro. Se houver alguma obra mockada
-    // que foi "salva" com um ID idêntico, a versão salva prevalecerá.
+  
     obrasSalvas.forEach(obra => {
       obrasUnicasMap.set(obra.id, obra);
     });
 
-    // Em seguida, adicione as obras mockadas. Se uma obra mockada
-    // tiver um ID que já existe (porque uma obra salva usou esse ID),
-    // ela NÃO substituirá a versão salva. Se o ID for novo, ela será adicionada.
+ 
     obrasMockadas.forEach(obra => {
       if (!obrasUnicasMap.has(obra.id)) {
         obrasUnicasMap.set(obra.id, obra);
       }
     });
 
-    // Converte o mapa de volta para um array de obras
+    
     setObras(Array.from(obrasUnicasMap.values()));
 
-  }, []); // O array vazio de dependências significa que isso roda APENAS uma vez ao montar o componente.
+  }, []);
 
   const calcularPrazoAtualEstimado = (dataInicioStr, prazoStr) => {
     if (!dataInicioStr || !prazoStr) return '—';
@@ -118,7 +115,7 @@ function Obras() {
 
         {obrasFiltradas.length > 0 ? (
           obrasFiltradas.map((obra, index) => (
-            // IMPORTANTE: Use obra.id como key, pois ele é garantido ser único
+           
             <li className="item-lista" key={obra.id}>
               <Link to={`/detalhesObra/${obra.id}`} className="col col-nome">
                 {obra.nome}

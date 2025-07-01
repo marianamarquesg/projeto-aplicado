@@ -6,7 +6,7 @@ import ObraGrafico from './ObraGrafico';
 function DetalhesObra() {
   const { id } = useParams();
 
-  // Lista fixa
+
   const obrasFixas = [
     {
       id: 1,
@@ -50,13 +50,12 @@ function DetalhesObra() {
     }
   ];
 
-  // Pegando as obras salvas no localStorage (se houver)
+
   const obrasSalvas = JSON.parse(localStorage.getItem('obrasSalvas')) || [];
 
-  // Junta tudo
+
   const todasObras = [...obrasFixas, ...obrasSalvas];
 
-  // Busca a obra pelo id da URL
   const obra = todasObras.find((o) => String(o.id) === id);
 
   if (!obra) {

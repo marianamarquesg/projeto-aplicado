@@ -1,9 +1,9 @@
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 
 export default function ObraGrafico({ obra }) {
-  const dataInicio = new Date(obra.dataInicio || new Date()); // usa data atual se não tiver
+  const dataInicio = new Date(obra.dataInicio || new Date()); 
   const dataPlanejada = new Date(dataInicio);
-  dataPlanejada.setDate(dataPlanejada.getDate() + Number(obra.prazo)); // adiciona os dias do prazo
+  dataPlanejada.setDate(dataPlanejada.getDate() + Number(obra.prazo));
 
   const dataFinal = new Date(obra.dataFinal);
 
